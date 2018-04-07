@@ -12,15 +12,15 @@ app.use(express.static(path.join(__dirname, "public")));
 io.on('connection', function(socket) {
   console.log('new connection made');
 
-  //Private room function
-  socket.on('join-private', function(data){
-    socket.join('private');
-    console.log(data.nickname + 'joined private');
-  });
+//   //Private room function
+//   socket.on('join-private', function(data){
+//     socket.join('private');
+//     console.log(data.nickname + 'joined private');
+//   });
 
-socket.on('private-chat', function(data){
-  socket.broadcast.to('private').emit('show-message', data.message);
-})
+// socket.on('private-chat', function(data){
+//   socket.broadcast.to('private').emit('show-message', data.message);
+// })
 
 
   //Show all users when first logged on 
@@ -48,12 +48,12 @@ socket.on('private-chat', function(data){
     //io.emit('message-received',data);
   })
 
-  //Send a 'like' to the user of my choice
-  socket.on('send-like', function(data){
-    console.log(data)
+  // //Send a 'like' to the user of my choice
+  // socket.on('send-like', function(data){
+  //   console.log(data)
 
-    socket.broadcast.to(data.like).emit('user-liked', data);
-  })
+  //   socket.broadcast.to(data.like).emit('user-liked', data);
+  // })
 
   //Disconnect from socket
   socket.on('disconnect', function(){
