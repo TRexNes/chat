@@ -6,7 +6,7 @@
 <br>
 <div class="row">
   <div class="col-md-2">
-    <small class="marker">Other Users</small>
+    <small class="marker">Users Online</small>
     <ul class="list-unstyled">
       <li class="user"
            ng-repeat="user in users track by $index">
@@ -15,25 +15,13 @@
             {{user.nickname}}
         </span>
         &nbsp;
-        <!-- <a href="#" ng-click="sendLike(user)">
-        <i class="fa fa-thumbs-up"></i> -->
+        
         </a>
         </li>
       </ul>
     </div>
 
-  <!-- <div class="col-md-2">
-    <small class="marker">Likes</small>
-    <ul class="list-unstyled">
-      <li ng-repeat='username in likes track by $index'>
-        <span class='label btn-mini label-default userlabel' >
-          <i class='fa fa-thumbs-o-up'></i>
-          {{username}}
-         </span>
-         <small class="text-primary">&nbsp; sent like</small>
-      </li>
-    </ul>
-  </div> -->
+ 
 
   <div class="col-md-8">
     <form ng-submit='sendMessage()'>
@@ -64,18 +52,5 @@
   </div>
 </div>
 
-<!-- <div class="row">
-  <div class="col-md-2">
-    <button type="button"
-      class="btn btn-default"
-      ng-click="joinPrivate()">Private Group</button>
-  </div>
-</div>
-<div class="row">
-    <div class="col-md-2">
-      <button type="button"
-        class="btn btn-default"
-        ng-click="groupPm()">Send Group Message</button>
-    </div>
-  </div> -->
+
   
