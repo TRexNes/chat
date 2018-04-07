@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 io.on('connection', function(socket) {
   console.log('new connection made');
 
-  //Join Private room
+  //Private room function
   socket.on('join-private', function(data){
     socket.join('private');
     console.log(data.nickname + 'joined private');
