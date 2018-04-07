@@ -13,7 +13,6 @@ io.on('connection', function(socket) {
   console.log('new connection made');
 
 
-
   //Show all users when first logged on 
   socket.on('get-users', function(){
     socket.emit('all-users', users);
@@ -39,7 +38,6 @@ io.on('connection', function(socket) {
     //io.emit('message-received',data);
   })
 
-
   //Disconnect from socket
   socket.on('disconnect', function(){
     users = users.filter(function(item){
@@ -48,12 +46,8 @@ io.on('connection', function(socket) {
     io.emit('all-users',users);
   })
 
-
 });
 
 server.listen(process.env.PORT || port)
-// server.listen(port, function() {
-//   console.log("Listening on port " + port);
-// });
 
 console.log(`listening on port ${port}`);

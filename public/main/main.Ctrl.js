@@ -11,23 +11,10 @@
     $scope.message ='';
     $scope.messages = [];
     $scope.users = [];
-    // $scope.likes= [];
 
     $scope.mynickname = $localStorage.nickname;
     var nickname = $scope.mynickname;
 
-  //   $scope.joinPrivate = function(){
-  //     socket.emit('join-private',{
-  //       nickname: nickname
-  //   });
-  //   console.log('private room joined!');
-  // }
-
-  // $scope.groupPm = function(){
-  //   socket.emit('private-chat',{
-  //     message: 'hello everybody!'
-  //   });
-  // }
 
   socket.on('show-message', function(data){
     console.log(data);
@@ -48,11 +35,6 @@
       $scope.messages.push(data);
     })
 
-    // socket.on('user-liked', function(data){
-    //   console.log(data);
-    //   $scope.likes.push(data.from);
-    // })
-
 
     $scope.sendMessage = function(date){
       var newMessage = {
@@ -64,16 +46,6 @@
       $scope.messages.push(newMessage);
     }
 
-    // $scope.sendLike = function(user){
-    //   console.log(user);
-    //   var id = lodash.get(user,'socketid');
-    //   var likeObj = {
-    //     from: nickname,
-    //     like: id
-    //   }
-
-    //   socket.emit('send-like',likeObj);
-    // }
 
   };
 })();
