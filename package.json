@@ -1,28 +1,25 @@
 {
-  "name": "node-js-chatt-app",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
-  "author": "Rex Nesbit",
-  "engines": {
-    "node": "6.10.2"
-  },
-  "main": "index.js",
+  "name": "ngApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "ejs": "^2.5.7",
-    "express": "^4.16.3",
-    "socket.io": "^2.0.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TRexNes/chat.git"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+    "express": "^4.13.4",
+    "path": "^0.12.7",
+    "socket.io": "^1.4.5",
+    "jquery": "~2.2.2",
+    "angular": "~1.5.3",
+    "angular-route": "~1.5.3",
+    "angular-sanitize": "~1.5.3",
+    "angular-cookies": "~1.5.3",
+    "ng-lodash": "~0.2.3",
+    "ng-storage": "~0.3.2",
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
 }
